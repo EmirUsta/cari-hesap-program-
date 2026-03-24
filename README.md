@@ -27,8 +27,10 @@ To start the entire stack (FastAPI Backend + PostgreSQL Database) locally withou
 docker compose up --build
 ```
 
-3. The FastAPI server will be available at `http://localhost:8000`. You can view the automatic Swagger UI documentation at `http://localhost:8000/docs`.
-4. The PostgreSQL database is mapped to port `5432` on your host machine, using the credentials `admin`:`password123` with a database named `pos_db`.
+3. **Admin Panel:** Available at `http://localhost:5173`. Use this to manage Customers and Products.
+4. **POS Panel:** Available at `http://localhost:5174`. Use this for fast checkout operations and point of sale.
+5. **Backend API:** The FastAPI server will be available at `http://localhost:8000`. You can view the automatic Swagger UI documentation at `http://localhost:8000/docs`.
+6. **Database:** The PostgreSQL database is mapped to port `5432` on your host machine, using the credentials `admin`:`password123` with a database named `pos_db`.
 
 To stop the containers and remove them (without destroying your data, since volumes persist):
 ```bash
