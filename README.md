@@ -1,1 +1,17 @@
-# cari-hesap-program-
+# Current Account and POS Management System
+
+## Project Overview
+This project is a comprehensive accounting, current account (customer balance), and Point of Sale (POS) system built from scratch. The system is designed to handle inventory management, customer debt/credit tracking, and fast checkout processes.
+
+## System Architecture & Modules
+1. **Core Database & API:** The central backbone storing customers, products, inventory levels, and financial transactions (debt/credit).
+2. **Back-Office Management Panel:** An administrative interface for creating new customer accounts, tracking balances, managing inventory, and viewing reports.
+3. **POS (Point of Sale) Panel:** A fast-paced screen for sales staff to search for products, add them to a cart, and complete transactions that instantly update customer balances and inventory.
+
+## Tech Stack
+- **Backend:** Python (Targeting a modern framework like FastAPI or Django)
+- **Frontend:** React.js
+- **Database:** PostgreSQL
+
+## Deployment
+The application will be containerized using Docker to ensure seamless deployment and testing across different environments.
