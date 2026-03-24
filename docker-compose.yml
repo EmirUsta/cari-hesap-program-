@@ -28,5 +28,31 @@ services:
       # Optional: bind mount the backend directory for live-reload during local dev
       - ./backend:/app
 
+  admin_panel:
+    build:
+      context: ./admin-panel
+      dockerfile: Dockerfile
+    container_name: react_admin_panel
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    volumes:
+      - ./admin-panel:/app
+      - /app/node_modules
+
+  pos_panel:
+    build:
+      context: ./pos-panel
+      dockerfile: Dockerfile
+    container_name: react_pos_panel
+    ports:
+      - "5174:5174"
+    depends_on:
+      - api
+    volumes:
+      - ./pos-panel:/app
+      - /app/node_modules
+
 volumes:
   postgres_data:
