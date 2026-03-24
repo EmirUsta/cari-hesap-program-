@@ -15,3 +15,27 @@ This project is a comprehensive accounting, current account (customer balance), 
 
 ## Deployment
 The application will be containerized using Docker to ensure seamless deployment and testing across different environments.
+
+### Local Development via Docker
+
+To start the entire stack (FastAPI Backend + PostgreSQL Database) locally without managing Python versions or a local database installation:
+
+1. Ensure [Docker Desktop](https://www.docker.com/products/docker-desktop/) or Docker Engine is installed and running.
+2. From the root directory of this repository, run:
+
+```bash
+docker compose up --build
+```
+
+3. The FastAPI server will be available at `http://localhost:8000`. You can view the automatic Swagger UI documentation at `http://localhost:8000/docs`.
+4. The PostgreSQL database is mapped to port `5432` on your host machine, using the credentials `admin`:`password123` with a database named `pos_db`.
+
+To stop the containers and remove them (without destroying your data, since volumes persist):
+```bash
+docker compose down
+```
+
+To destroy the database volume (wipe all data):
+```bash
+docker compose down -v
+```
